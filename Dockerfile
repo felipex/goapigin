@@ -1,10 +1,10 @@
-FROM golang:1.20-alpine AS build
+FROM golang:1.23-alpine AS build
 
 WORKDIR /go/src/app
 
 COPY . .
 
-RUN go mod init github.com/felipex/apigin
+#RUN go mod init github.com/felipex/apigin
 RUN go mod tidy
 RUN go get github.com/gin-gonic/gin
 #RUN go build -o main main.go

@@ -5,6 +5,7 @@ run:
 	docker run --rm -p 8080:8080 \
 		--expose 8080 \
 		--name goapigin \
+		--env-file .env \
 		goapigin
 
 add:
@@ -19,3 +20,4 @@ get:
 		-X GET \
 		-v \
 		http://localhost:8080/api/v1/user/acadx0
+
